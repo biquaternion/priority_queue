@@ -35,7 +35,7 @@ int prQueuePush(PrQueue * p_queue, int n_priority, void * p_item) {
             p_queue->p_item[(i - 1) / 2].n_priority) {
         // swap
         struct Item tmp = p_queue->p_item[i];
-        p_queue->p_item[i] = p_queue->p_item[i / 2];
+        p_queue->p_item[i] = p_queue->p_item[(i - 1) / 2];
         p_queue->p_item[(i - 1) / 2] = tmp;
         i = (i - 1) / 2;
     }
