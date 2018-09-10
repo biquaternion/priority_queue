@@ -29,23 +29,6 @@ typedef struct _PrQueue PrQueue;
 
 int prQueueCreate(size_t n_capacity, PrQueue **pp_queue);
 
-/* Brief: Create priority queue with the specified capacity.
-Input:
-n_capacity
-- The queue capacity.
-pp_queue
-- Pointer to the variable to fill with new queue pointer.
-Output:
-*pp_queue
-- Will contain a pointer to a newly created queue.
-Return:
-STATUS_OK
-- Operation completed succesfully
-STATUS_ERR_INVALID - Invalid argumeents passed.
- STATUS_ERR_NOMEM
-- Not enough memory to allocate the queue.
- */
-
 int prQueuePush(PrQueue *p_queue, int n_priority, void *p_item);
 
 int prQueuePop(PrQueue *p_queue, int *pn_priority, void **pp_item);
